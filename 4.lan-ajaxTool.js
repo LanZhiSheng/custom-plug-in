@@ -2,12 +2,7 @@
   // 一般会使用命名空间进行优化 把我们想要添加的 变量 属性 方法呀 全部都 丢到一个对象的里面
   // 只往页面中 添加了一个对象
   // 所有要增加的内容 都在这个对象的 属性中
-  var heima = {
-    sayHi: function () {
-
-    },
-    eatfood: function () {
-    },
+  var $_ = {
     get: function (url, data, success) {
       //1.创建异步对象
       var xhr = new XMLHttpRequest();
