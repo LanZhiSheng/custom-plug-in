@@ -1,6 +1,6 @@
 // 一般插件的 主要方法 跟插件的名字 是一样的
 /*
-  由于这个插件是我们自己来编写 可以要求 使用者 遵守一些规范 如果不遵守 那么就不要用
+  由于这个插件是我自己来编写 可以要求 使用者 遵守一些规范 如果不遵守 那么就不要用
   调用这个插件 
     需要通过 瀑布流的 容器来调用 $('.container').waterfall();
     瀑布流容器中 布局的子元素 必须使用 .item 作为类名
@@ -78,17 +78,3 @@ $.fn.extend({
     return $this;
   }
 })
-
-// 方法中的this 
-// $('.container').waterfall().click(function(){
-//   console.log(this);
-// })
-// $('.container').click(function(){
-//   console.log(this);
-// })
-// // jQuery的 click方法 如果我们传入了一个匿名函数 相当与 是为 这个dom元素的 click事件赋值了
-// document.getElementsByClassName('container')[0].onclick = function(){
-//   console.log(this)
-// }
-// // 当我触发了 container的 点击事件时 相当于 做了这么一件事
-// document.getElementsByClassName('container')[0].onclick();
