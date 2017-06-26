@@ -126,11 +126,6 @@
       }
 
       //5.发送请求
-      // if(type=='get'){
-      //   xhr.send(null);
-      // }else{
-      //   xhr.send(data);
-      // }
       xhr.send(option.data);
     }
   }
