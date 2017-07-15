@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>title</title>
+    <style>
+      html,body{
+        height: 100%;
+      }
+      body{
+        margin: 0;
+        background-color: greenyellow;
+      }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+  /*
+      实现 左划
+      用结束时的坐标点 减去 起始的坐标点 x坐标  如果是 负值 说明是左划
+        touchstart
+        touchmove
+        touchend
+  */ 
+  var startX = 0;
+  var moveX = 0;
+  document.body.addEventListener('touchstart',function(event){
+    startX = event.touches[0].clientX;
+  })
+  // 记录 x坐标 为了在end中使用
+  document.body.addEventListener('touchmove',function(event){
+    moveX = event.touches[0].clientX;
+  })
+  document.body.addEventListener('touchend',function(event){
+    // 获取 手指离开时的坐标点
+    console.log(moveX -startX);
+    // 如果是负值 那么就触发了
+    if((moveX -startX)<0){
+      console.log('左划触发了');
+    }
+  })
+</script>
